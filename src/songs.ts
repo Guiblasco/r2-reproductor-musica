@@ -60,9 +60,7 @@ export const getNextSongPosition = (
 };
 
 export const isCurrentSong = (song: Song): boolean => {
-  let isCurrent: boolean;
-  // Asígnale a la variable isCurrent un true o un false dependiendo de si
-  // la canción recibida es la actual
+  let isCurrent: boolean = song.isCurrent ? true : false;
 
   return isCurrent;
 };
