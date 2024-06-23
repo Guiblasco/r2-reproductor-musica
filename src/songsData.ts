@@ -1,5 +1,3 @@
-// Crea un tipo para un objeto canción
-// Servirá para tipar las canciones que tienes más abajo
 export type Song = {
   title: string;
   durationInSeconds: number;
