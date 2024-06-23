@@ -1,8 +1,8 @@
 import { Song } from "./songsData";
 
 export const areSameSong = (song: Song, songTitle: string): boolean => {
-  let areSame: boolean = false;
-  song.title === songTitle ? true : false;
+  let areSame: boolean = song.title === songTitle ? true : false;
+
   return areSame;
 };
 
@@ -11,25 +11,25 @@ export const addSong = (song: Song, songs: Song[]): void => {
 };
 
 export const isPlaylistFull = (songs: Song[]): boolean => {
-  let isFull: boolean = false;
-  songs.length >= 4 ? true : false;
+  let isFull: boolean = songs.length >= 4 ? true : false;
+
   return isFull;
 };
 
 export const getErrorMessage = (errorCode: string): string => {
   let errorMessage: string = errorCode;
-  switch (errorCode) {
+  switch (errorMessage) {
     case "exists":
-      errorCode = "La canción ya existe";
+      errorMessage = "La canción ya existe";
       break;
     case "limit":
-      errorCode = "La playlist está llena";
+      errorMessage = "La playlist está llena";
       break;
     default:
       "Error, código recibido no válido";
       break;
   }
-  return errorCode;
+  return errorMessage;
 };
 
 export const getSongsCount = (songs: Song[]): number => {
