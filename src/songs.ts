@@ -33,10 +33,7 @@ export const getErrorMessage = (errorCode: string): string => {
 };
 
 export const getSongsCount = (songs: Song[]): number => {
-  let songsCount: number;
-  // Asígnale a la variable songsCount el número de canciones recibidas
-
-  songsCount = 0; // Cambia esta línea por tu código
+  let songsCount: number = songs.length;
 
   return songsCount;
 };
